@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+body {
+    background-color: #23253a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    color: #f2f2f2;
+    padding: 75px 0px;
+    font-size: 3em;
+}
+
+h2 {
+    padding-top: .5em;
+}
+
+h3 {
+    padding-bottom: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1em;
+
+}
+
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    column-gap: 2.5em;
+    row-gap: 2.5em;
+    justify-items: center;
+    width: 75%;
+}
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1em;
+    padding: 1em 1em;
+
+    /* From https://css.glass */
+    background: rgba(62, 66, 100, 0.38);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    
+}
+
+.card-content {
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.card-buttons {
+    margin-top: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    padding: .5em 1em;
+
+    position: relative;
+    background: linear-gradient(91.91deg, #FC6060 3.83%, #FF9A44 96.03%);
+    box-shadow: 0px 6px 18px rgba(107, 59, 0, 0.25);
+    border-radius: .75em;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.card-buttons:hover {
+    cursor: pointer;
+    background: linear-gradient(91.91deg, #e35656 3.83%, #e68b3d 96.03%);
+    
+}
+
+.card-item:hover{
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+
+@media (max-width: 1150px) {
+    .grid-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 2.5em;
+    }}
+
+
+@media (max-width: 700px) {
+    .grid-links {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 2.5em;
+    }}
